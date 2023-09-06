@@ -15,6 +15,8 @@ function Navbark() {
                 <Nav className="me-auto">
                     <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href={`/user/products/${id}`}>Products</Nav.Link>
+                    <Nav.Link href={`/user/create/${id}`}>Create Product</Nav.Link>
+                    
                 </Nav>
             </Container>
         </Navbar>

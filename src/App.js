@@ -6,6 +6,8 @@ import Technic from './Technician';
 import Acceptance from './Acceptance';
 import UserPage from './UserPage';
 import ProductPage from './pages/ProductPage';
+import CreateProductPage from './pages/CreateProductPage';
+import ConsultPage from './pages/ConsultPage';
 
 
 function App() {
@@ -20,6 +22,9 @@ function App() {
         <Route path="/technician" element={<Technic/>} />
         <Route path="/user/:id"element={<UserPage/>}/>
         <Route path="/user/products/:id" element={<ProductPage/>}/>
+        <Route path='/user/create/:id'element={<CreateProductPage/>}/>
+        <Route path="/user/consult/:id/:id2" element={<ConsultPage/>}/>
+      
       </Routes>
     </Router>
   );

@@ -1,13 +1,13 @@
 import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Product from "../components/Product";
 
 
 function ProductPage(){
 
-    const [users, setUsers] = useState([]);
-    const navigate = useNavigate();
+    const [products, setProducts] = useState([]);
     const { id } = useParams();
 
      
@@ -31,7 +31,7 @@ function ProductPage(){
           .get(`http://localhost:5004/api/v1/user/products/${id}`, {headers})
           .then((response) => {
             console.log(response);
-            setUsers(response.data);
+            setProducts(response.data);
             console.log("product: ", response.data);
           })
           .catch((error) => {
@@ -49,6 +49,12 @@ function ProductPage(){
       return(
         <>
         <h1>Product page</h1>
+
+        {
+            products.map((product, idx)=>(
+                <Product key={idx} product={product}></Product>
+            ))
+        }
 
         </>
       )
