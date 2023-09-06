@@ -33,10 +33,13 @@ function Login() {
             localStorage.setItem('role', userRole);
             localStorage.setItem('token', token)
 
-            // Redirect to different pages or show different components based on the user's role
-            if (userRole === 'USER') {
-                console.log("user")
-            } else if (userRole === 'ACCEPTANCE') {
+           if(userRole==='USER'){
+                console.log('user1')
+                console.log(response.data)
+                console.log(response.data.access_token)
+                navigate(`user/${response.data.id}`)
+            }
+             else if (userRole === 'ACCEPTANCE') {
                 console.log("Acceptance")
                 console.log(response.data.access_token)
                 navigate("/acceptance");
@@ -45,6 +48,7 @@ function Login() {
                 console.log("technic")
                 navigate("/technician");
             }
+    
         } catch (error) {
             console.error('Login failed:', error);
             navigate("/");
