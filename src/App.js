@@ -8,6 +8,7 @@ import UserPage from './UserPage';
 import ProductPage from './pages/ProductPage';
 import CreateProductPage from './pages/CreateProductPage';
 import ConsultPage from './pages/ConsultPage';
+import ProductsPage from './pages/ProductsPage';
 
 
 function App() {
@@ -20,10 +21,13 @@ function App() {
         <Route path="/" element={<Login/>} />
         <Route path="/acceptance" element={<Acceptance/>} />
         <Route path="/technician" element={<Technic/>} />
+        
         <Route path="/user/:id"element={<UserPage/>}/>
         <Route path="/user/products/:id" element={<ProductPage/>}/>
         <Route path='/user/create/:id'element={<CreateProductPage/>}/>
         <Route path="/user/consult/:id/:id2" element={<ConsultPage/>}/>
+        
+        <Route path="/acceptance/products"element={<ProductsPage/>}/>
       
       </Routes>
     </Router>

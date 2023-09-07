@@ -1,11 +1,11 @@
-// src/Management.js
 import React from 'react';
+import Navbark2 from './components/Navbark2';
 
 function Acceptance() {
   return (
     <div>
       <h1>Acceptance Page</h1>
-      {/* Add content for the management page */}
+      <Navbark2/>
     </div>
   );
 }

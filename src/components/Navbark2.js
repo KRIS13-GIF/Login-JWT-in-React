@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import React from "react";
 import { useParams } from 'react-router-dom';
 
-function Navbark() {
+function Navbark2() {
     const { id } = useParams();
     console.log(id)
 
@@ -13,8 +13,8 @@ function Navbark() {
             <Container>
                 <Nav className="me-auto">
                     <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href={`/user/products/${id}`}>Products</Nav.Link>
-                    <Nav.Link href={`/user/create/${id}`}>Create Product</Nav.Link>
+                    <Nav.Link href={"/acceptance/products/"}>Products</Nav.Link>
+                    
                     
                 </Nav>
             </Container>
@@ -22,4 +22,4 @@ function Navbark() {
     )
 }
 
-export default Navbark;
+export default Navbark2;
